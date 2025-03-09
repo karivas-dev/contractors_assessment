@@ -1,0 +1,51 @@
+@import url(https://fonts.bunny.net/css?family=montserrat:400,500,600,700,800);
+@import url(https://fonts.bunny.net/css?family=inter:400,500,600,700);
+@import "tailwindcss";
+
+@theme {
+    --font-montserrat: 'Montserrat', sans-serif;
+    --font-inter: 'Inter', sans-serif;
+
+    --color-main: #7505e0;
+    --color-main-500: #973fff;
+    --color-main-400: #ae76ff;
+    --color-main-300: #c7a7ff;
+    --color-main-200: #deceff;
+    --color-main-100: #eee5ff;
+    --color-main-50: #f5f1ff;
+
+    --color-secondary: #33cccc;
+    --color-secondary-950: #15555a;
+    --color-secondary-500: #1bafb1;
+    --color-secondary-400: #33cccc;
+    --color-secondary-300: #31e4e4;
+    --color-secondary-200: #9df2ec;
+    --color-secondary-100: #cef9f5;
+    --color-secondary-50: #f1fcfb;
+
+    --color-neutral-950: #0a0a0a;
+    --color-neutral-700: #4f4f4f;
+    --color-neutral-500: #6d6d6d;
+    --color-neutral-300: #b0b0b0;
+    --color-neutral-100: #e7e7e7;
+    --color-neutral-50: #f6f6f6;
+
+    --color-disabled: #888fa8;
+
+    --color-accent: #18243e;
+
+    --color-success-950: #00340a;
+    --color-success-500: #00c220;
+    --color-success-200: #b2ffbd;
+    --color-success-50: #eefff0;
+
+    --color-warning-950: #453303;
+    --color-warning-500: #f5b40b;
+    --color-warning-200: #fddd8a;
+    --color-warning-50: #fff9eb;
+
+    --color-error-950: #450a0a;
+    --color-error-500: #dc2626;
+    --color-error-200: #fecaca;
+    --color-error-50: #fef2f2;
+}
