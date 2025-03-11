@@ -49,3 +49,13 @@
     --color-error-200: #fecaca;
     --color-error-50: #fef2f2;
 }
+
+@layer components {
+    .title {
+        @apply font-montserrat font-bold text-[40px] text-accent;
+    }
+
+    .subtitle {
+        @apply font-montserrat font-bold text-[32px] text-accent;
+    }
+}
