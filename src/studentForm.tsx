@@ -11,8 +11,8 @@ import {useFormStore} from "./stores/useFormStore.ts";
 import {useStore} from "zustand/react";
 
 export default function StudentForm() {
-    const {goBack, setCurrentView} = useStore(useViewStore);
-    const {userType, user, setUser} = useStore(useFormStore);
+    const {goBack} = useStore(useViewStore);
+    const {user, setUser} = useStore(useFormStore);
 
     return (
         <>
