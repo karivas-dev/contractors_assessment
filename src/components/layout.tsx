@@ -1,10 +1,10 @@
-import Navbar from "./components/navbar.tsx";
-import bgRadialVector from "./assets/bg-radial-vector.svg";
+import Navbar from "./navbar.tsx";
+import bgRadialVector from "../assets/bg-radial-vector.svg";
 
 export default function Layout({children}: { children: React.ReactNode }) {
     return (
         <div
-            className="max-w-[1440px] mx-auto p-[32px] h-screen grid place-content-between justify-center relative overflow-x-hidden">
+            className="max-w-[1440px] mx-auto p-[32px] min-h-screen grid place-content-between justify-center relative overflow-x-hidden">
             <Navbar backAtLeft={false}/>
             {children}
             <p className="text-accent text-center">Todos los derechos reservados, 2024®</p>
