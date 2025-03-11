@@ -1,20 +1,20 @@
 import beMusician from './assets/beMusician.jpg';
 import beTalentHunter from './assets/beTalent-hunter.jpg';
 import beStudent from './assets/beStudent.jpeg';
-import Layout from "./layout.tsx";
+import Layout from "./components/layout.tsx";
 import {useViewStore} from "./stores/useViewStore.ts";
-import LayoutSide from "./layout-side.tsx";
+import {useFormStore} from "./stores/useFormStore.ts";
 
 
-export default function Start() {
-    const {setView} = useViewStore();
+export default function PassionSelector() {
+    const {setCurrentView} = useViewStore.getState();
 
     return (
         <>
             <Layout>
                 <div className="max-h-[800px] flex flex-col justify-center items-center space-y-[32px]">
                     <div className="max-w-[800px] mx-auto">
-                        <h1 className="font-montserrat font-bold text-[40px] text-accent">¿Cuál es tu pasión?</h1>
+                        <h1 className="title">¿Cuál es tu pasión?</h1>
                         <p className="text-disabled">Antes de iniciar a crear una cuenta, selecciona que tipo de usuario
                             eres para poder completar la información que te solicitamos.</p>
                     </div>
@@ -30,7 +30,10 @@ export default function Start() {
                             </h2>
                         </div>
 
-                        <div>
+                        <div onClick={() => {
+                            useFormStore.setState({passion: 'Estudiante'});
+                            setCurrentView("studentForm")
+                        }}>
                             <img src={beStudent} alt="Estudiante"
                                  className="object-cover w-full max-h-full"/>
                             <h2 className="font-montserrat font-extrabold text-[40px] text-[40px]/10 text-white absolute left-0 bottom-0 flex flex-col
@@ -40,7 +43,10 @@ export default function Start() {
                             </h2>
                         </div>
 
-                        <div onClick={() => setView(LayoutSide)}>
+                        <div onClick={() => {
+                            useFormStore.setState({passion: 'Talent Hunter'});
+                            setCurrentView("clientSelector")
+                        }}>
                             <img src={beTalentHunter} alt="Cazatalentos" className="h-full object-cover w-auto"/>
                             <h2 className="font-montserrat font-extrabold text-[40px] text-[40px]/10 text-white absolute left-0 bottom-0 flex flex-col
                         bg-linear-to-t from-accent from-12% w-full pl-[24px] pb-[24px]">
